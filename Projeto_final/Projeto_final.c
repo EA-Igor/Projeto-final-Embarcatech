@@ -52,7 +52,7 @@ void setup() {
     adc_select_input(4);
     leitura_adc = adc_read();
     tensao = (leitura_adc * 3.3) / 4095.0;
-    temperatura = (int)(27 - (tensao - 0.706)/0.001721); // Exemplo para TMP36
+    temperatura = (int)(27 - (tensao - 0.706)/0.001721); // Formula fornecida no datasheet do rp2040
 }
 
 void atualizar_display(const char *mensagem, int temp) {
